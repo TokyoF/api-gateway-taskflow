@@ -1,0 +1,12 @@
+
+version: '3.8'
+
+services:
+  api-gateway:
+    container_name: api-gateway
+    image: t0ky0le/api-gateway:1.0
+    ports:
+      - "8765:8765"
+    environment:
+      - SERVER_PORT=8765
+      - EUREKA_SERVER_URL=http://discovery-server:8761/eureka/
